@@ -44,7 +44,11 @@ function Navbar() {
   // };
 
   return (
-    <AppBar position='sticky'>
+    <AppBar
+      position='fixed'
+      // style={{ background: 'rgba(0, 0, 0, 0.3)', boxShadow: 'none' }}
+      style={{ background: 'none', boxShadow: 'none' }}
+    >
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           {/* add logo or icon */}
@@ -109,6 +113,17 @@ function Navbar() {
                   </Link>
                 </MenuItem>
               ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link
+                  to='/register'
+                  style={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Sign Up
+                </Link>
+              </MenuItem>
             </Menu>
           </Box>
 
@@ -133,7 +148,13 @@ function Navbar() {
           </Typography>
 
           {/* desktop nav menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'flex-end',
+            }}
+          >
             {routes.map((route) => (
               <Button
                 key={route.title}
@@ -151,9 +172,15 @@ function Navbar() {
                 </Link>
               </Button>
             ))}
+            <Button
+              variant='contained'
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Sign Up
+            </Button>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, ml: 2 }}>
             <Tooltip title='Open settings'>
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
