@@ -5,6 +5,7 @@ import {
   InputAdornment,
   Button,
   TextField,
+  Typography,
   // styled,
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,8 +22,27 @@ const HeroSection = () => {
       }}
     >
       <Box className='hero__text'>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing</h1>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui</p>
+        {/* <h1>Lorem ipsum dolor sit amet, consectetur adipiscing</h1>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui</p> */}
+        <Typography
+          variant='h3'
+          gutterBottom
+          sx={{
+            fontWeight: 'bold',
+            color: 'white',
+          }}
+        >
+          Lorem ipsum dolor sit amet, consectetur
+        </Typography>
+        <Typography
+          variant='h5'
+          gutterBottom
+          sx={{
+            color: 'white',
+          }}
+        >
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        </Typography>
 
         <Grid
           container

@@ -27,7 +27,6 @@ const Home = () => {
       style={{ margin: 0, padding: 0 }}
       maxWidth={false}
     >
-      {/* add a hero image */}
       <Container maxWidth={false} style={{ margin: 0, padding: 0 }}>
         <HeroSection />
       </Container>
@@ -38,7 +37,7 @@ const Home = () => {
           sx={{
             justifyContent: 'space-between',
             alignItems: 'center',
-            padding: '3rem 4rem',
+            padding: '3rem 4rem 1rem 4rem',
           }}
         >
           <Grid
@@ -50,10 +49,24 @@ const Home = () => {
               padding: 0,
             }}
           >
-            <Typography variant='h5' mr={2} gutterBottom>
+            <Typography
+              variant='h5'
+              mr={2}
+              gutterBottom
+              sx={{
+                fontWeight: 'bold',
+              }}
+            >
               All
             </Typography>
-            <Typography variant='h5' gutterBottom>
+            <Typography
+              variant='h5'
+              gutterBottom
+              sx={{
+                color: '#b3b3b3',
+                fontWeight: 'bold',
+              }}
+            >
               Category
             </Typography>
           </Grid>
