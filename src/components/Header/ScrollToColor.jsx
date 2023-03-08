@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom'
 import { useScrollTrigger } from '@mui/material';
 
 const ScrollHandler = (props) => {
+  const location = useLocation();
+
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -11,7 +14,7 @@ const ScrollHandler = (props) => {
   return React.cloneElement(props.children, {
     style: {
       backgroundColor: trigger ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
-      // color: trigger ? 'white' : 'black',
+      color: location.pathname === '/' ? 'white' : 'black',
       transition: trigger ? '0.3s' : '0.5s',
       boxShadow: 'none',
       // padding: '10px 0px',

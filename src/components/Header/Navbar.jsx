@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import {
   AppBar,
   Container,
@@ -13,17 +13,16 @@ import {
   Tooltip,
   Avatar,
 } from '@mui/material';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
 import ScrollToColor from './ScrollToColor';
-
 import routes from '../../routes';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
+  const location = useLocation();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -168,7 +167,7 @@ function Navbar() {
                   <Link
                     to={route.path}
                     style={{
-                      color: 'inherit',
+                      color: location.pathname === '/' ? 'white' : 'black',
                       textDecoration: 'none',
                     }}
                   >
