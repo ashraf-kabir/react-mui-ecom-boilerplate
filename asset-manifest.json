@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "http://localhost:3000/static/css/main.b077b1de.css",
-    "main.js": "http://localhost:3000/static/js/main.8fe76a96.js",
-    "index.html": "http://localhost:3000/index.html",
-    "main.b077b1de.css.map": "http://localhost:3000/static/css/main.b077b1de.css.map",
-    "main.8fe76a96.js.map": "http://localhost:3000/static/js/main.8fe76a96.js.map"
+    "main.css": "/react-mui-ecom-boilerplate/static/css/main.b077b1de.css",
+    "main.js": "/react-mui-ecom-boilerplate/static/js/main.2fe8aa1e.js",
+    "index.html": "/react-mui-ecom-boilerplate/index.html",
+    "main.b077b1de.css.map": "/react-mui-ecom-boilerplate/static/css/main.b077b1de.css.map",
+    "main.2fe8aa1e.js.map": "/react-mui-ecom-boilerplate/static/js/main.2fe8aa1e.js.map"
   },
   "entrypoints": [
     "static/css/main.b077b1de.css",
-    "static/js/main.8fe76a96.js"
+    "static/js/main.2fe8aa1e.js"
   ]
 }
