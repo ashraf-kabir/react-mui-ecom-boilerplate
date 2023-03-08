@@ -8,7 +8,7 @@ const Banner = () => {
       className='banner__image'
       style={{
         backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/nike-3.jpg)',
+          'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/react-mui-ecom-boilerplate/img/nike-3.jpg)',
       }}
     >
       <Box className='banner__text'>
