@@ -6,7 +6,6 @@ import {
   Button,
   TextField,
   Typography,
-  // styled,
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -22,8 +21,6 @@ const HeroSection = () => {
       }}
     >
       <Box className='hero__text'>
-        {/* <h1>Lorem ipsum dolor sit amet, consectetur adipiscing</h1>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui</p> */}
         <Typography
           variant='h3'
           gutterBottom
