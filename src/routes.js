@@ -4,7 +4,7 @@ import Cart from './components/Pages/Cart/Cart';
 
 const routes = [
   {
-    path: '/react-mui-ecom-boilerplate',
+    path: '/react-mui-ecom-boilerplate/',
     component: Home,
     title: 'Home',
     exact: true,
@@ -20,7 +20,7 @@ const routes = [
     component: Cart,
     title: 'Cart',
     exact: true,
-  }
+  },
 ];
 
 export default routes;

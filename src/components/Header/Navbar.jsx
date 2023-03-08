@@ -59,7 +59,7 @@ function Navbar() {
               variant='h6'
               noWrap
               component='a'
-              href='/react-mui-ecom-boilerplate'
+              href='/react-mui-ecom-boilerplate/'
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -135,7 +135,7 @@ function Navbar() {
               variant='h5'
               noWrap
               component='a'
-              href='/react-mui-ecom-boilerplate'
+              href='/react-mui-ecom-boilerplate/'
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -167,7 +167,7 @@ function Navbar() {
                   <Link
                     to={route.path}
                     style={{
-                      color: location.pathname === '/react-mui-ecom-boilerplate' ? 'white' : 'black',
+                      color: location.pathname === '/react-mui-ecom-boilerplate/' ? 'white' : 'black',
                       textDecoration: 'none',
                     }}
                   >
