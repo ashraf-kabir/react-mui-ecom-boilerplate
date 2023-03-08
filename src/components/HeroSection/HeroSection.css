@@ -30,3 +30,7 @@
   background-color: #555;
   color: white;
 }
+
+.custom__fieldset fieldset {
+  border-radius: 0.5rem;
+}
