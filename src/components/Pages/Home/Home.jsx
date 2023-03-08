@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShuffle } from '@fortawesome/free-solid-svg-icons';
 import HeroSection from '../../HeroSection/HeroSection';
 import ProductCard from '../../ProductCard/ProductCard';
+import Banner from '../../Banner/Banner';
 
 const Home = () => {
   const [category, setCategory] = React.useState('');
@@ -156,6 +157,10 @@ const Home = () => {
             <ProductCard />
           </Grid>
         </Grid>
+      </Container>
+
+      <Container maxWidth={false} style={{ margin: 0, padding: 0 }}>
+        <Banner />
       </Container>
     </Container>
   );
