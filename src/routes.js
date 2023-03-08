@@ -4,19 +4,19 @@ import Cart from './components/Pages/Cart/Cart';
 
 const routes = [
   {
-    path: '/',
+    path: '/react-mui-ecom-boilerplate',
     component: Home,
     title: 'Home',
     exact: true,
   },
   {
-    path: '/about',
+    path: '/react-mui-ecom-boilerplate/about',
     component: About,
     title: 'About',
     exact: true,
   },
   {
-    path: '/cart',
+    path: '/react-mui-ecom-boilerplate/cart',
     component: Cart,
     title: 'Cart',
     exact: true,

@@ -14,7 +14,7 @@ const ScrollHandler = (props) => {
   return React.cloneElement(props.children, {
     style: {
       backgroundColor: trigger ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
-      color: location.pathname === '/' ? 'white' : 'black',
+      color: location.pathname === '/react-mui-ecom-boilerplate' ? 'white' : 'black',
       transition: trigger ? '0.3s' : '0.5s',
       boxShadow: 'none',
       // padding: '10px 0px',

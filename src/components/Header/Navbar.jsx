@@ -167,7 +167,7 @@ function Navbar() {
                   <Link
                     to={route.path}
                     style={{
-                      color: location.pathname === '/' ? 'white' : 'black',
+                      color: location.pathname === '/react-mui-ecom-boilerplate' ? 'white' : 'black',
                       textDecoration: 'none',
                     }}
                   >
