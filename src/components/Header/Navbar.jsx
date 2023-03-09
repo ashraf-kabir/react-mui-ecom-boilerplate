@@ -21,6 +21,7 @@ import routes from '../../routes';
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
+  // const [routes, setRoutes] = React.useState([]);
   const location = useLocation();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -103,19 +104,22 @@ function Navbar() {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {routes.map((route) => (
-                  <MenuItem key={route.title} onClick={handleCloseNavMenu}>
-                    <Link
-                      to={route.path}
-                      style={{
-                        color: 'inherit',
-                        textDecoration: 'none',
-                      }}
-                    >
-                      {route.title}
-                    </Link>
-                  </MenuItem>
-                ))}
+                {routes
+                  .filter((route) => route.path !== '*')
+                  .map((route) => (
+                    <MenuItem key={route.title} onClick={handleCloseNavMenu}>
+                      <Link
+                        to={route.path}
+                        style={{
+                          color: 'inherit',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        {route.title}
+                      </Link>
+                    </MenuItem>
+                  ))}
+
                 <MenuItem onClick={handleCloseNavMenu}>
                   <Link
                     to='/register'
@@ -158,23 +162,28 @@ function Navbar() {
                 justifyContent: 'flex-end',
               }}
             >
-              {routes.map((route) => (
-                <Button
-                  key={route.title}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  <Link
-                    to={route.path}
-                    style={{
-                      color: location.pathname === '/react-mui-ecom-boilerplate/' ? 'white' : 'black',
-                      textDecoration: 'none',
-                    }}
+              {routes
+                .filter((route) => route.path !== '*')
+                .map((route) => (
+                  <Button
+                    key={route.title}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                    {route.title}
-                  </Link>
-                </Button>
-              ))}
+                    <Link
+                      to={route.path}
+                      style={{
+                        color:
+                          location.pathname === '/react-mui-ecom-boilerplate/'
+                            ? 'white'
+                            : 'black',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      {route.title}
+                    </Link>
+                  </Button>
+                ))}
               <Button
                 variant='contained'
                 sx={{ my: 2, color: 'white', display: 'block' }}

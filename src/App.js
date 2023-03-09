@@ -5,7 +5,6 @@ import routes from './routes';
 import Navbar from './components/Header/Navbar';
 import Footer from './components/Footer/Footer';
 
-
 function App() {
   return (
     <div className='App'>
