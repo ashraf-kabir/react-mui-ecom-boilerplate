@@ -12,13 +12,13 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
   return (
     <Card>
       <CardMedia
-        sx={{ height: 160 }}
-        image='/react-mui-ecom-boilerplate/img/nike-air-max-270.jpg'
-        title='Nike Air Max 270'
+        sx={{ height: 180 }}
+        image={product.image}
+        title={product.name}
       />
       <CardContent>
         <Box
@@ -29,7 +29,7 @@ const ProductCard = () => {
           }}
         >
           <Typography gutterBottom variant='h5' component='div'>
-            Nike Air Max 270
+            {product.name}
           </Typography>
         </Box>
 
@@ -87,7 +87,7 @@ const ProductCard = () => {
           }}
         >
           <Typography variant='h6' component={'span'} color='secondary'>
-            $160.00
+            ${product.price.toFixed(2)}
           </Typography>
         </Box>
       </CardContent>

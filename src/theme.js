@@ -41,6 +41,16 @@ const theme = createTheme({
       light: '#ff5c8d',
       dark: '#c51162',
     },
+    info: {
+      main: '#2196f3',
+      light: '#64b5f6',
+      dark: '#1976d2',
+    },
+    success: {
+      main: '#4caf50',
+      light: '#81c784',
+      dark: '#388e3c',
+    },
   },
 });
 

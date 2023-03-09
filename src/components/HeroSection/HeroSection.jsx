@@ -17,7 +17,7 @@ const HeroSection = () => {
       className='hero__image'
       style={{
         backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/react-mui-ecom-boilerplate/img/hero-1.jpg)',
+          'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/react-mui-ecom-boilerplate/img/nike-hero.jpg)',
       }}
     >
       <Box className='hero__text'>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
 import HeroSection from '../../HeroSection/HeroSection';
-import ProductCard from '../../ProductCard/ProductCard';
 import Banner from '../../Banner/Banner';
 import CategorySection from '../../CategorySection/CategorySection';
+import ProductSection from '../../ProductSection/ProductSection';
 
 const categories = [
   {
@@ -28,7 +28,78 @@ const categories = [
   },
   {
     id: 6,
-    name: 'Accessories',
+    name: 'Medicine',
+  },
+  {
+    id: 7,
+    name: 'Cosmetics',
+  },
+];
+
+const products = [
+  {
+    id: 1,
+    name: 'Nike Air Max 270',
+    price: 120,
+    image: '/react-mui-ecom-boilerplate/img/nike-air-max-270.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 5,
+  },
+  {
+    id: 2,
+    name: 'Air Jordan 6 Retro',
+    price: 140,
+    image: '/react-mui-ecom-boilerplate/img/air-jordan-1.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 5,
+  },
+  {
+    id: 3,
+    name: 'Galaxy Tab S6 Lite',
+    price: 400,
+    image: '/react-mui-ecom-boilerplate/img/samsung-galaxy-tab.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 3,
+  },
+  {
+    id: 4,
+    name: 'BenQ GW2280 22"',
+    price: 100,
+    image: '/react-mui-ecom-boilerplate/img/gw2283-500x500.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 3,
+  },
+  {
+    id: 5,
+    name: 'Head First Design Patterns',
+    price: 50,
+    image: '/react-mui-ecom-boilerplate/img/head-first-design-patterns.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 2,
+  },
+  {
+    id: 6,
+    name: 'Tang Orange Flavor',
+    price: 10,
+    image: '/react-mui-ecom-boilerplate/img/tang-orange.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 1,
+  },
+  {
+    id: 7,
+    name: 'Herbal Essences Shampoo',
+    price: 20,
+    image: '/react-mui-ecom-boilerplate/img/herbal-essences-shampoo.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 7,
+  },
+  {
+    id: 8,
+    name: 'Macbook Air 2020 13"',
+    price: 1000,
+    image: '/react-mui-ecom-boilerplate/img/macbook-air.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category_id: 3,
   },
 ];
 
@@ -54,42 +125,7 @@ const Home = () => {
           }}
         >
           <CategorySection categories={categories} />
-          <Grid
-            item
-            xs={12}
-            sm={9}
-            sx={{
-              display: 'flex',
-              justifyContent: 'flex-start',
-              alignItems: 'flex-start',
-              flexWrap: 'wrap',
-            }}
-          >
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-              <ProductCard />
-            </Grid>
-          </Grid>
+          <ProductSection products={products} />
         </Grid>
       </Container>
 
