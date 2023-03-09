@@ -178,6 +178,7 @@ function Navbar() {
               <Button
                 variant='contained'
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                color='secondary'
               >
                 Sign Up
               </Button>

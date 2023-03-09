@@ -18,7 +18,7 @@ const ProductCard = () => {
       <CardMedia
         sx={{ height: 160 }}
         image='/react-mui-ecom-boilerplate/img/nike-air-max-270.jpg'
-        title='green iguana'
+        title='Nike Air Max 270'
       />
       <CardContent>
         <Box
