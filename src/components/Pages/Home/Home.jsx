@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Grid } from '@mui/material';
 import HeroSection from '../../HeroSection/HeroSection';
 import Banner from '../../Banner/Banner';
-import CategorySection from '../../CategorySection/CategorySection';
 import ProductSection from '../../ProductSection/ProductSection';
+import FilterSection from '../../FilterSection/FilterSection';
 
 const categories = [
   {
@@ -103,6 +103,12 @@ const products = [
   },
 ];
 
+const priceRange = {
+  name: '$0 - $1000',
+  min: 0,
+  max: 1000,
+};
+
 const Home = () => {
   return (
     <Container
@@ -124,7 +130,8 @@ const Home = () => {
             padding: '3rem 0rem 2rem 0rem',
           }}
         >
-          <CategorySection categories={categories} />
+          {/* <CategorySection categories={categories} /> */}
+          <FilterSection categories={categories} priceRange={priceRange} />
           <ProductSection products={products} />
         </Grid>
       </Container>

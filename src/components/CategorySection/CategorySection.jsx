@@ -3,7 +3,7 @@ import { Grid, Box, Typography, Checkbox } from '@mui/material';
 
 const CategorySection = ({ categories }) => {
   return (
-    <Grid item xs={12} sm={3}>
+    <Grid item xs={12}>
       <Typography
         variant='h5'
         gutterBottom
@@ -46,10 +46,9 @@ const CategorySection = ({ categories }) => {
             defaultChecked
             color='primary'
             inputProps={{ 'aria-label': 'secondary checkbox' }}
+            size='small'
           />
-          <Typography variant='body1' gutterBottom>
-            All
-          </Typography>
+          <Typography variant='body2'>All</Typography>
         </Box>
         {categories.map((category) => (
           <Box
@@ -65,10 +64,9 @@ const CategorySection = ({ categories }) => {
               defaultChecked
               color='primary'
               inputProps={{ 'aria-label': 'secondary checkbox' }}
+              size='small'
             />
-            <Typography variant='body1' gutterBottom>
-              {category.name}
-            </Typography>
+            <Typography variant='body2'>{category.name}</Typography>
           </Box>
         ))}
       </Box>
