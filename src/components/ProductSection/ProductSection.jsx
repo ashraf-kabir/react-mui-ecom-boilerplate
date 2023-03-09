@@ -5,9 +5,9 @@ import ProductCard from '../ProductCard/ProductCard';
 const ProductSection = ({ products }) => {
   return (
     <Grid item xs={12} sm={9}>
-      <Grid item xs={12} sm={3}>
+      <Grid item xs={12} pl={2}>
         <Typography
-          variant='h5'
+          variant='h4'
           gutterBottom
           sx={{
             fontWeight: 'bold',
