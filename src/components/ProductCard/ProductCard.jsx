@@ -10,16 +10,66 @@ import {
   Typography,
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCheck,
+  faCartPlus,
+  faHeart,
+  faShareNodes,
+} from '@fortawesome/free-solid-svg-icons';
 
 const ProductCard = ({ product }) => {
   return (
-    <Card>
+    <Card
+      sx={{
+        position: 'relative',
+      }}
+    >
       <CardMedia
         sx={{ height: 180 }}
         image={product.image}
         title={product.name}
       />
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '0',
+          right: '2rem',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '2rem',
+          height: '2rem',
+          borderRadius: '50%',
+          color: 'heartColor.main',
+          cursor: 'pointer',
+          '&:hover': {
+            backgroundColor: 'rgba(0, 0, 0, 0.2)',
+          },
+        }}
+      >
+        <FontAwesomeIcon icon={faHeart} />
+      </Box>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '0',
+          right: '0',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '2rem',
+          height: '2rem',
+          borderRadius: '50%',
+          color: 'secondary.main',
+          cursor: 'pointer',
+          '&:hover': {
+            backgroundColor: 'rgba(0, 0, 0, 0.2)',
+          },
+        }}
+      >
+        <FontAwesomeIcon icon={faShareNodes} />
+      </Box>
+
       <CardContent>
         <Box
           sx={{

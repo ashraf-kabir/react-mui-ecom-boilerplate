@@ -51,6 +51,11 @@ const theme = createTheme({
       light: '#81c784',
       dark: '#388e3c',
     },
+    heartColor: {
+      main: '#f44336',
+      light: '#ff7961',
+      dark: '#ba000d',
+    }
   },
 });
 
