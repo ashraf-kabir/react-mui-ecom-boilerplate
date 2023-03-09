@@ -10,14 +10,14 @@ import {
   Typography,
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 const ProductCard = () => {
   return (
     <Card>
       <CardMedia
-        sx={{ height: 140 }}
-        image='/react-mui-ecom-boilerplate/img/sample-image.jpg'
+        sx={{ height: 160 }}
+        image='/react-mui-ecom-boilerplate/img/nike-air-max-270.jpg'
         title='green iguana'
       />
       <CardContent>
@@ -29,16 +29,67 @@ const ProductCard = () => {
           }}
         >
           <Typography gutterBottom variant='h5' component='div'>
-            JBL EON 615
-          </Typography>
-          <Typography variant='h5' component={'span'} color='primary'>
-            $ 1,000
+            Nike Air Max 270
           </Typography>
         </Box>
-        <Typography variant='body2' color='text.secondary'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut minima
-          enim molestiae architecto voluptatem
-        </Typography>
+
+        <Box>
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+            }}
+          >
+            <li>
+              <Typography variant='body2' color='text.secondary'>
+                <FontAwesomeIcon icon={faCheck} />
+                &nbsp; Maximum Air
+              </Typography>
+            </li>
+            <li>
+              <Typography variant='body2' color='text.secondary'>
+                <FontAwesomeIcon icon={faCheck} />
+                &nbsp; Big Air, Even Bigger Style
+              </Typography>
+            </li>
+            <li>
+              <Typography variant='body2' color='text.secondary'>
+                <FontAwesomeIcon icon={faCheck} />
+                &nbsp; Lightweight Cushioning
+              </Typography>
+            </li>
+          </ul>
+        </Box>
+
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginTop: '1rem',
+          }}
+        >
+          <Typography variant='body2' color='text.secondary'>
+            437 sold
+          </Typography>
+          <Typography variant='body2' color='text.secondary'>
+            5 left
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: '0.5rem',
+          }}
+        >
+          <Typography variant='h6' component={'span'} color='secondary'>
+            $160.00
+          </Typography>
+        </Box>
       </CardContent>
       <CardActions>
         <Grid
@@ -51,12 +102,12 @@ const ProductCard = () => {
         >
           <Button
             variant='contained'
-            color='primary'
+            color='secondary'
             size='medium'
             style={{ width: '100%' }}
             endIcon={<FontAwesomeIcon icon={faCartPlus} />}
           >
-            Add to cart
+            Buy now
           </Button>
         </Grid>
       </CardActions>

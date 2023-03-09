@@ -1,27 +1,37 @@
 import React from 'react';
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShuffle } from '@fortawesome/free-solid-svg-icons';
+import { Container, Grid, Box, Typography, Checkbox } from '@mui/material';
 import HeroSection from '../../HeroSection/HeroSection';
 import ProductCard from '../../ProductCard/ProductCard';
 import Banner from '../../Banner/Banner';
 
+const categories = [
+  {
+    id: 1,
+    name: 'Food',
+  },
+  {
+    id: 2,
+    name: 'Books',
+  },
+  {
+    id: 3,
+    name: 'Electronics',
+  },
+  {
+    id: 4,
+    name: 'Clothes',
+  },
+  {
+    id: 5,
+    name: 'Shoes',
+  },
+  {
+    id: 6,
+    name: 'Accessories',
+  },
+];
+
 const Home = () => {
-  const [category, setCategory] = React.useState('');
-
-  const handleChange = (event) => {
-    setCategory(event.target.value);
-  };
-
   return (
     <Container
       component='main'
@@ -32,129 +42,121 @@ const Home = () => {
         <HeroSection />
       </Container>
 
-      <Container maxWidth={false} style={{ margin: 0, padding: 0 }}>
+      <Container maxWidth='xl'>
         <Grid
           container
+          spacing={2}
           sx={{
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '3rem 4rem 1rem 4rem',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            padding: '3rem 0rem 2rem 0rem',
           }}
         >
-          <Grid
-            item
-            md={10}
-            style={{
-              display: 'flex',
-              justifyContent: 'flex-start',
-              padding: 0,
-            }}
-          >
+          <Grid item xs={12} sm={3}>
             <Typography
               variant='h5'
-              mr={2}
               gutterBottom
               sx={{
                 fontWeight: 'bold',
               }}
             >
-              All
+              Categories
             </Typography>
             <Typography
-              variant='h5'
+              variant='body1'
               gutterBottom
               sx={{
                 color: '#b3b3b3',
-                fontWeight: 'bold',
               }}
             >
-              Category
+              Select a category to filter products
             </Typography>
-          </Grid>
-          <Grid
-            item
-            md={2}
-            style={{
-              display: 'flex',
-              justifyContent: 'flex-end',
-              padding: 0,
-            }}
-          >
             <Box
               sx={{
                 display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '0.25rem 0.5rem',
-                fontSize: '1rem',
+                flexDirection: 'column',
+                justifyContent: 'flex-start',
                 border: '1px solid #ccc',
                 borderRadius: '0.5rem',
-                marginRight: '1rem',
+                padding: '0.5rem',
+                marginTop: '1rem',
+                width: '100%',
               }}
             >
-              <FontAwesomeIcon icon={faShuffle} />
-            </Box>
-            <Box sx={{ minWidth: 140 }}>
-              <FormControl fullWidth>
-                <InputLabel id='demo-simple-select-label'>Category</InputLabel>
-                <Select
-                  labelId='demo-simple-select-label'
-                  id='demo-simple-select'
-                  value={category}
-                  label='Category'
-                  onChange={handleChange}
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'flex-start',
+                  alignItems: 'center',
+                  fontSize: '1rem',
+                }}
+              >
+                <Checkbox
+                  defaultChecked
+                  color='primary'
+                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                />
+                <Typography variant='body1' gutterBottom>
+                  All
+                </Typography>
+              </Box>
+              {categories.map((category) => (
+                <Box
+                  key={category.id}
                   sx={{
-                    '& .MuiSelect-select': {
-                      padding: '0.5rem 1rem',
-                      fontSize: '1rem',
-                    },
+                    display: 'flex',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    fontSize: '1rem',
                   }}
                 >
-                  <MenuItem value=''>
-                    <em>All</em>
-                  </MenuItem>
-                  <MenuItem value={1}>Food</MenuItem>
-                  <MenuItem value={2}>Books</MenuItem>
-                  <MenuItem value={3}>Electronics</MenuItem>
-                </Select>
-              </FormControl>
+                  <Checkbox
+                    defaultChecked
+                    color='primary'
+                    inputProps={{ 'aria-label': 'secondary checkbox' }}
+                  />
+                  <Typography variant='body1' gutterBottom>
+                    {category.name}
+                  </Typography>
+                </Box>
+              ))}
             </Box>
           </Grid>
-        </Grid>
-      </Container>
-
-      <Container maxWidth={false} style={{ margin: 0, padding: 0 }}>
-        <Grid
-          container
-          sx={{
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '0 3rem 3rem 3rem',
-          }}
-        >
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
-          </Grid>
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
-          </Grid>
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
-          </Grid>
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
-          </Grid>
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
-          </Grid>
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
-          </Grid>
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
-          </Grid>
-          <Grid item lg={3} md={4} sm={6} my={3} px={3}>
-            <ProductCard />
+          <Grid
+            item
+            xs={12}
+            sm={9}
+            sx={{
+              display: 'flex',
+              justifyContent: 'flex-start',
+              alignItems: 'flex-start',
+              flexWrap: 'wrap',
+            }}
+          >
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
+            <Grid item lg={3} md={4} sm={6} my={3} px={3}>
+              <ProductCard />
+            </Grid>
           </Grid>
         </Grid>
       </Container>

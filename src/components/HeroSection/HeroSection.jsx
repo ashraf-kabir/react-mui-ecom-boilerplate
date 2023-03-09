@@ -98,8 +98,16 @@ const HeroSection = () => {
                 width: '90%',
                 borderRadius: '0.5rem',
               }}
+              color='secondary'
             >
-              Search
+              <Typography
+                variant='h6'
+                sx={{
+                  fontWeight: 'bold',
+                }}
+              >
+                Search
+              </Typography>
             </Button>
           </Grid>
         </Grid>
