@@ -33,6 +33,7 @@ const PriceRangeSlider = ({
         value={value}
         min={minVal}
         max={maxVal}
+        color='secondary'
         onChange={handleChange}
         valueLabelDisplay='auto'
         getAriaValueText={valuetext}

@@ -44,7 +44,7 @@ const CategorySection = ({ categories }) => {
         >
           <Checkbox
             defaultChecked
-            color='primary'
+            color='secondary'
             inputProps={{ 'aria-label': 'secondary checkbox' }}
             size='small'
           />
@@ -62,7 +62,7 @@ const CategorySection = ({ categories }) => {
           >
             <Checkbox
               defaultChecked
-              color='primary'
+              color='secondary'
               inputProps={{ 'aria-label': 'secondary checkbox' }}
               size='small'
             />
