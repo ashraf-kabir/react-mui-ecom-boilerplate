@@ -9,28 +9,6 @@ import theme from './theme';
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
-// root.render(
-//   <ThemeProvider theme={theme}>
-//     <CssBaseline />
-//     <App />
-//   </ThemeProvider>
-// );
-
-// root.render(
-//   <React.StrictMode>
-//     <ThemeProvider theme={theme}>
-//       <CssBaseline />
-//       <App />
-//     </ThemeProvider>
-//   </React.StrictMode>
-// );
-
 root.render(
   <BrowserRouter>
     <React.StrictMode>

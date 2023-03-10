@@ -130,7 +130,6 @@ const Home = () => {
             padding: '3rem 0rem 2rem 0rem',
           }}
         >
-          {/* <CategorySection categories={categories} /> */}
           <FilterSection categories={categories} priceRange={priceRange} />
           <ProductSection products={products} />
         </Grid>

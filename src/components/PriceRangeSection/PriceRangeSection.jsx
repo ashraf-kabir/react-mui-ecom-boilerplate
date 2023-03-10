@@ -33,8 +33,8 @@ const PriceRangeSection = ({ priceRange }) => {
           minDistance={10}
           minVal={0}
           maxVal={1000}
-          startVal={0}
-          endVal={600}
+          startVal={200}
+          endVal={850}
         />
       </Box>
     </Grid>
