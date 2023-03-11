@@ -36,7 +36,7 @@ const Footer = () => {
         alignItems: 'center',
       }}
     >
-      <Container maxWidth={false}>
+      <Container maxWidth='xl'>
         <Grid
           container
           sx={{
