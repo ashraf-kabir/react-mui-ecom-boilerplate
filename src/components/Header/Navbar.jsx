@@ -16,11 +16,14 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import ScrollToColor from './ScrollToColor';
+import { useGlobalContext } from '../../contexts/GlobalContext';
+import LoginModal from '../LoginModal/LoginModal';
 import routes from '../../routes';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
+  const { setLoginModal } = useGlobalContext();
   // const [routes, setRoutes] = React.useState([]);
   const location = useLocation();
 
@@ -46,11 +49,15 @@ function Navbar() {
   //   e.preventDefault();
   // };
 
+  const handleLoginModal = () => {
+    setLoginModal(true);
+    handleCloseNavMenu();
+  };
+
   return (
     <ScrollToColor>
       <AppBar
         position='fixed'
-        // style={{ background: 'rgba(0, 0, 0, 0.3)', boxShadow: 'none' }}
         style={{ background: 'none', boxShadow: 'none' }}
       >
         <Container maxWidth='xl'>
@@ -120,15 +127,14 @@ function Navbar() {
                     </MenuItem>
                   ))}
 
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={handleLoginModal}>
                   <Link
-                    to='/register'
                     style={{
                       color: 'inherit',
                       textDecoration: 'none',
                     }}
                   >
-                    Sign Up
+                    Sign In
                   </Link>
                 </MenuItem>
               </Menu>
@@ -168,7 +174,12 @@ function Navbar() {
                   <Button
                     key={route.title}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block', textAlign: 'center' }}
+                    sx={{
+                      my: 2,
+                      color: 'white',
+                      display: 'block',
+                      textAlign: 'center',
+                    }}
                   >
                     <Link
                       to={route.path}
@@ -188,8 +199,9 @@ function Navbar() {
                 variant='contained'
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 color='secondary'
+                onClick={handleLoginModal}
               >
-                Sign Up
+                Sign In
               </Button>
             </Box>
 
@@ -224,6 +236,7 @@ function Navbar() {
             </Box>
           </Toolbar>
         </Container>
+        <LoginModal />
       </AppBar>
     </ScrollToColor>
   );
