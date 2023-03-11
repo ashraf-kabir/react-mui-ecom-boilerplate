@@ -10,6 +10,8 @@ import {
   Input,
   Typography,
 } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function ccyFormat(num) {
   return `${num.toFixed(2)}`;
@@ -125,7 +127,9 @@ export default function SpanningTable() {
               </TableCell>
               <TableCell align='right'>{row.unit}</TableCell>
               <TableCell align='right'>{ccyFormat(row.price)}</TableCell>
-              <TableCell align='right'>Remove</TableCell>
+              <TableCell align='right'>
+                <FontAwesomeIcon icon={faTrash} color='red' />
+              </TableCell>
             </TableRow>
           ))}
 

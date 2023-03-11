@@ -168,7 +168,7 @@ function Navbar() {
                   <Button
                     key={route.title}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    sx={{ my: 2, color: 'white', display: 'block', textAlign: 'center' }}
                   >
                     <Link
                       to={route.path}
