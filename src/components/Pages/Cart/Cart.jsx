@@ -15,7 +15,7 @@ const Cart = () => {
   return (
     <Container
       component='main'
-      style={{ margin: 0, padding: '5rem 0 0 0' }}
+      style={{ margin: 0, padding: '8rem 0 0 0' }}
       maxWidth={false}
     >
       <Container maxWidth='lg'>
