@@ -31,14 +31,14 @@ function subtotal(items) {
 }
 
 const rows = [
-  createRow('Paperclips (Box)', 100, 1.15),
-  createRow('Paper (Case)', 10, 45.99),
-  createRow('Waste Basket', 2, 17.99),
+  createRow('Nike Air Max 270', 1, 180),
+  createRow('Herbal Essences Shampoo', 3, 20),
+  createRow('Head First Design Patterns', 1, 50),
 ];
 
 const invoiceSubtotal = subtotal(rows);
 
-export default function SpanningTable() {
+export default function CartTable() {
   return (
     <TableContainer component={Paper}>
       <Table size='small' aria-label='spanning table'>
@@ -125,18 +125,42 @@ export default function SpanningTable() {
                   }}
                 />
               </TableCell>
-              <TableCell align='right'>{row.unit}</TableCell>
-              <TableCell align='right'>{ccyFormat(row.price)}</TableCell>
+              <TableCell align='right'>${row.unit}</TableCell>
+              <TableCell align='right'>${ccyFormat(row.price)}</TableCell>
               <TableCell align='right'>
                 <FontAwesomeIcon icon={faTrash} color='red' />
               </TableCell>
             </TableRow>
           ))}
 
-          <TableRow>
+          <TableRow
+            sx={{
+              '&:last-child td, &:last-child th': {
+                border: 0,
+              },
+            }}
+          >
             <TableCell rowSpan={4} />
-            <TableCell colSpan={2}>Subtotal</TableCell>
-            <TableCell align='right'>{ccyFormat(invoiceSubtotal)}</TableCell>
+            <TableCell colSpan={2}>
+              <Typography
+                variant='subtitle1'
+                sx={{
+                  fontWeight: 'bold',
+                }}
+              >
+                Subtotal
+              </Typography>
+            </TableCell>
+            <TableCell align='right'>
+              <Typography
+                variant='subtitle1'
+                sx={{
+                  fontWeight: 'bold',
+                }}
+              >
+                ${ccyFormat(invoiceSubtotal)}
+              </Typography>
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>

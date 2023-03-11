@@ -10,7 +10,12 @@ import {
 
 function Copyright() {
   return (
-    <Typography variant='body2' color='text.secondary' align='center'>
+    <Typography
+      variant='body2'
+      color='text.secondary'
+      align='center'
+      fontWeight={500}
+    >
       {'Copyright © '}
       <Link color='inherit' href='https://ashraf-kabir.github.io/'>
         Ashraf Kabir
@@ -47,11 +52,7 @@ const Footer = () => {
           <Grid item>
             <Copyright />
           </Grid>
-          <Grid
-            item
-            // add padding top 1 rem when the screen is small
-            sx={{ '@media (max-width: 600px)': { pt: 2 } }}
-          >
+          <Grid item sx={{ '@media (max-width: 600px)': { pt: 2 } }}>
             <Box
               sx={{
                 display: 'flex',

@@ -24,7 +24,7 @@ const routes = [
     component: Cart,
     title: (
       <Badge
-        badgeContent={4}
+        badgeContent={3}
         color='heartColor'
         sx={{
           '& .MuiBadge-badge': {

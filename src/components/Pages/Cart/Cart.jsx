@@ -9,7 +9,7 @@ import {
   CardActions,
   CardContent,
 } from '@mui/material';
-import Table from '../../Table/Table';
+import CartTable from '../../CartTable/CartTable';
 
 const Cart = () => {
   return (
@@ -42,7 +42,7 @@ const Cart = () => {
         </Grid>
         <Grid container spacing={2}>
           <Grid item sm={12} md={8}>
-            <Table />
+            <CartTable />
           </Grid>
           <Grid item sm={12} md={4}>
             <Card
