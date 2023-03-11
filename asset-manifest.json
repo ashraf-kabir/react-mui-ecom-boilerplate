@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-mui-ecom-boilerplate/static/css/main.b077b1de.css",
-    "main.js": "/react-mui-ecom-boilerplate/static/js/main.c82b472d.js",
+    "main.js": "/react-mui-ecom-boilerplate/static/js/main.3d5b4107.js",
     "index.html": "/react-mui-ecom-boilerplate/index.html",
     "main.b077b1de.css.map": "/react-mui-ecom-boilerplate/static/css/main.b077b1de.css.map",
-    "main.c82b472d.js.map": "/react-mui-ecom-boilerplate/static/js/main.c82b472d.js.map"
+    "main.3d5b4107.js.map": "/react-mui-ecom-boilerplate/static/js/main.3d5b4107.js.map"
   },
   "entrypoints": [
     "static/css/main.b077b1de.css",
-    "static/js/main.c82b472d.js"
+    "static/js/main.3d5b4107.js"
   ]
 }
