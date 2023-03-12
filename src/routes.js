@@ -1,7 +1,7 @@
-import Home from './components/Pages/Home/Home';
-import About from './components/Pages/About/About';
-import Cart from './components/Pages/Cart/Cart';
-import PageNotFound from './components/Pages/PageNotFound/PageNotFound';
+import Home from 'pages/Home/Home';
+import About from 'pages/About/About';
+import Cart from 'pages/Cart/Cart';
+import PageNotFound from 'pages/PageNotFound/PageNotFound';
 import { Badge } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';

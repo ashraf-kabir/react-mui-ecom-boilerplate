@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
-import HeroSection from '../../HeroSection/HeroSection';
-import Banner from '../../Banner/Banner';
-import ProductSection from '../../ProductSection/ProductSection';
-import FilterSection from '../../FilterSection/FilterSection';
+import HeroSection from 'components/HeroSection/HeroSection';
+import Banner from 'components/Banner/Banner';
+import ProductSection from 'components/ProductSection/ProductSection';
+import FilterSection from 'components/FilterSection/FilterSection';
 
 const categories = [
   {

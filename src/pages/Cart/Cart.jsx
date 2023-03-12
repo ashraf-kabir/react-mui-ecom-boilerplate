@@ -9,7 +9,7 @@ import {
   CardActions,
   CardContent,
 } from '@mui/material';
-import CartTable from '../../CartTable/CartTable';
+import CartTable from 'components/CartTable/CartTable';
 
 const Cart = () => {
   return (
