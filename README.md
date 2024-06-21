@@ -44,4 +44,4 @@ npm run deploy
 [![GitHub followers](https://img.shields.io/github/followers/ashraf-kabir?style=social)](https://github.com/ashraf-kabir)
 
 
-### Raise start to support.
+### Raise a star to support.
